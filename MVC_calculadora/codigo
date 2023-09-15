@@ -1,0 +1,87 @@
+public class CalculatorModel{
+	private int calculationValue;
+	public void addTwoNumbers(int firstNumber, int secondNumber){
+		calculationValue = firstNumber + secondNumber;
+	}
+	public int getCalculationValue(){
+		return calculationValue;
+	}
+}
+
+import java.awt.event.ActionListener;
+import javax.swing.*;
+
+public class CalculatorView extends JFrame{
+	private JTextField firstNumber = new JTextField(10);
+	private JLabel additionLabel = new JLabel("+");
+	private JTextField secondNumber = new JTextField(10);
+	private JButton calculateButton = new JButton("Calculate");
+	private JTextField calcSolution = new JTextField(10);
+
+	CalculatorView(){
+		JPanel calcPanel = new JPanel();
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(600, 200);
+		calcPanel.add(firstNumber);
+		calcPanel.add(additionLabel);
+		calcPanel.add(secondNumber);
+		calcPanel.add(calculateButton);
+		calcPanel.add(calcSolution);
+		this.add(calcPanel);
+	}
+	public int getFirstNumber(){
+		return Integer.parseInt(firstNumber.getText());
+	}
+	public int getSecondNumber(){
+		return Integer.parseInt(secondNumber.getText());
+	}
+	public int getCalcSolution(){
+		return Integer.parseInt(calcSolution.getText());
+	}
+	public void setCalcSolution(int solution){
+		calcSolution.setText(Integer.toString(solution));
+	}
+	void addCalculateListener(ActionListener listenForCalcButton){
+		calculateButton.addActionListener(listenForCalcButton);
+	}
+	void displayErrorMessage(String errorMessage){
+		JOptionPane.showMessageDialog(this, errorMessage);
+	}
+}
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class CalculatorController{
+	private CalculatorView theView;
+	private CalculatorModel theModel;
+	public CalculatorController(CalculatorView theView, CalculatorModel theModel){
+		this.theView = theView;
+		this.theModel = theModel;
+		this.theView.addCalculateListener(new CalculateListener());
+	}
+	class CalculateListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			int firstNumber, secondNumber = 0;
+			try{
+				firstNumber = theView.getFirstNumber();
+				secondNumber = theView.getSecondNumber();
+				theModel.addTwoNumbers(firstNumber, secondNumber);
+				theView.setCalcSolution(theModel.getCalculationValue());
+			}
+			catch(NumberFormatException ex){
+				System.out.println(ex);
+				theView.displayErrorMessage("You need to enter 2 integers");
+			}
+		}
+	}
+}
+
+public class MVCCalculator{
+	public static void main(String[] args){
+		CalculatorView theView = new CalculatorView();
+		CalculatorModel theModel = new CalculatorModel();
+		CalculatorController theController = new CalculatorController(theView, theModel);
+		theView.setVisible(true);
+	}
+}
