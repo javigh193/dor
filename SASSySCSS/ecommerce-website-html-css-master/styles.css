@@ -12,36 +12,35 @@
 
 h1 {
   font-size: 54px;
-  font-weight: normal;
+  font-weight: false;
   line-height: 64px;
   color: #222;
 }
 
 h2 {
   font-size: 46px;
-  font-weight: normal;
+  font-weight: false;
   line-height: 54px;
   color: #222;
 }
 
 h4 {
   font-size: 20px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: #222;
 }
 
 h6 {
   font-size: 12px;
   font-weight: 700;
-  line-height: normal;
-  color: inherited;
+  line-height: false;
 }
 
 p {
   font-size: 16px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: #465b52;
   margin: 15px 0 20px 0;
 }
@@ -57,7 +56,7 @@ p {
 button.normal {
   font-size: 14px;
   font-weight: 600;
-  line-height: normal;
+  line-height: false;
   color: #000;
   padding: 15px 30px;
   background-color: #fff;
@@ -79,10 +78,8 @@ body {
 /* header styles */
 #header {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
   background-color: #e3e6f3;
   padding: 20px 80px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
@@ -95,10 +92,8 @@ body {
 
 .header-list {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 }
 .header-list-nav ul {
   display: flex;
@@ -111,7 +106,7 @@ body {
 .header-list-nav ul a {
   font-size: 16px;
   font-weight: 600;
-  line-height: normal;
+  line-height: false;
   color: #1a1a1a;
   text-decoration: none;
   transition: 0.3s ease;
@@ -149,7 +144,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
   padding: 0 80px;
 }
 #hero h4 {
@@ -160,15 +154,15 @@ body {
   font-size: 70px;
 }
 #hero h1 {
-  font-size: medium;
-  font-weight: normal;
-  line-height: normal;
+  font-size: 70px;
+  font-weight: false;
+  line-height: false;
   color: #088178;
 }
 #hero button {
   font-size: 20px;
   font-weight: 700;
-  line-height: normal;
+  line-height: false;
   color: #088178;
   background-color: transparent;
   background-image: url(images/button.png);
@@ -184,10 +178,8 @@ body {
 /* feature section styles */
 #features {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: nowrap;
 }
 #features .f-box {
   width: 180px;
@@ -210,7 +202,7 @@ body {
   display: inline-block;
   padding: 9px 8px 6px 8px;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: false;
   line-height: 1;
   color: #088178;
   border-radius: 4px;
@@ -235,9 +227,7 @@ body {
 /* feature section styles */
 .product-section .pro-collection {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  align-items: normal;
   flex-wrap: wrap;
   margin: 0 60px;
 }
@@ -262,15 +252,15 @@ body {
   border-radius: 25px;
 }
 .product-section .product-cart span {
-  font-size: medium;
+  font-size: false;
   font-weight: 500;
   line-height: 30px;
   color: #969696;
 }
 .product-section .product-cart h4 {
   font-size: 18px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: rgb(41, 41, 41);
 }
 .product-section .product-cart .stars {
@@ -301,7 +291,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 }
 #off-banner h4 {
   color: #eaebf0;
@@ -322,15 +311,13 @@ h4, span {
 #banners {
   margin: 0 60px;
 }
-#banners h2, #banners h4, #banners span {
+#banners h2 {
   color: rgb(248, 248, 248);
 }
 #banners .big-banners {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 }
 #banners .big-banners div {
   min-width: 580px;
@@ -340,7 +327,6 @@ h4, span {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
   padding: 25px;
   background-size: cover;
   -webkit-backdrop-filter: blur(8%);
@@ -355,7 +341,7 @@ h4, span {
   padding: 12px 20px;
   font-size: 16px;
   font-weight: 500;
-  line-height: normal;
+  line-height: false;
   color: rgb(248, 248, 248);
   background-color: transparent;
   border: 1px solid rgb(248, 248, 248);
@@ -370,10 +356,8 @@ h4, span {
 }
 #banners .small-banners {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
 }
 #banners .small-banners-1 {
   background-image: url(images/banner/b7.jpg);
@@ -392,7 +376,6 @@ h4, span {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
   padding: 25px;
   background-size: cover;
 }
@@ -411,23 +394,21 @@ h4, span {
   background-color: #041e42;
   height: 160px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
   padding: 0 75px;
 }
 #newsletter .newsletter-text h3 {
   font-size: 30px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: white;
   padding: 0 0 15px 0;
 }
 #newsletter .newsletter-text h5 {
   font-size: 17px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: rgb(151, 151, 151);
 }
 #newsletter .newsletter-text h5 span {
@@ -452,8 +433,8 @@ h4, span {
   width: 120px;
   background-color: #088178;
   font-size: 17px;
-  font-weight: normal;
-  line-height: normal;
+  font-weight: false;
+  line-height: false;
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
@@ -462,10 +443,8 @@ h4, span {
 /* footer section styles */
 #footer {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: nowrap;
   padding: 75px;
   background-color: #ececec;
 }

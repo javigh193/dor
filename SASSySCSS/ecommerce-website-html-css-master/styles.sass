@@ -11,18 +11,26 @@ $dark-gray: rgb(109, 109, 109)
 $light-gray: rgb(248, 248, 248)
 
 /* mixings */
-@mixin font-setup($size: medium, $weight: normal, $height: normal, $color: inherited)
-    font-size: $size
-    font-weight: $weight
-    line-height: $height
-    color: $color
+@mixin font-setup($size: false, $weight: false, $height: false, $color: false)
+    @if size
+      font-size: $size
+    @if weight
+      font-weight: $weight
+    @if height
+      line-height: $height
+    @if $color
+      color: $color
 
-@mixin flex-setup($justify: flex-start, $align: normal, $direction: row, $wrap: nowrap)
+@mixin flex-setup($justify: false, $align: false, $direction: false, $wrap: false)
   display: flex
-  flex-direction: $direction
-  justify-content: $justify
-  align-items: $align
-  flex-wrap: $wrap
+  @if $direction
+    flex-direction: $direction
+  @if $justify
+    justify-content: $justify
+  @if $align
+    align-items: $align
+  @if $wrap
+    flex-wrap: $wrap
 
 @mixin underline($width, $height, $color, $vertical-dist, $left-dist)
   content: ""
@@ -136,7 +144,7 @@ body
   h2
     font-size: 70px
   h1
-    @include font-setup($size: medium, $color: $turquoise)
+    @include font-setup($size: 70px, $color: $turquoise)
   button
     @include font-setup($size: 20px, $weight: 700, $color: $turquoise)
     background-color: transparent
@@ -254,7 +262,7 @@ h4, span
   color: $light-gray
 #banners
   margin: 0 60px
-  h2, h4, span
+  h2
     color: $light-gray
   .big-banners
     @include flex-setup($justify: center, $align: center)
