@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* variables */
-/* colors */
-/* urls */
-/* includes for headers */
 /* mixings */
 /* extendable classes */
 .fixed-top, #header {
@@ -65,7 +62,7 @@ p {
 }
 
 .section-m1 {
-  margin: 40px 0;
+  padding: 40px 0;
 }
 
 button.normal {
@@ -322,7 +319,7 @@ h4, span {
 #banners {
   margin: 0 60px;
 }
-#banners h2, #banners h4, #banners span {
+#banners h2 {
   color: rgb(248, 248, 248);
 }
 #banners .big-banners {
