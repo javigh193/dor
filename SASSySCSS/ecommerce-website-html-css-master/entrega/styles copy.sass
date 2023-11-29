@@ -9,11 +9,11 @@ $elements: 'about', 'myaccount'
 
 /* mixings */
 @mixin font-setup($size: false, $weight: false, $height: false, $color: false)
-    @if size
+    @if $size
       font-size: $size
-    @if weight
+    @if $weight
       font-weight: $weight
-    @if height
+    @if $height
       line-height: $height
     @if $color
       color: $color

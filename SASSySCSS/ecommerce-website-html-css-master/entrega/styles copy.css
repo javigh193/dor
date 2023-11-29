@@ -24,35 +24,28 @@
 
 h1 {
   font-size: 54px;
-  font-weight: false;
   line-height: 64px;
   color: #222;
 }
 
 h2 {
   font-size: 46px;
-  font-weight: false;
   line-height: 54px;
   color: #222;
 }
 
 h4 {
   font-size: 20px;
-  font-weight: false;
-  line-height: false;
   color: #222;
 }
 
 h6 {
   font-size: 12px;
   font-weight: 700;
-  line-height: false;
 }
 
 p {
   font-size: 16px;
-  font-weight: false;
-  line-height: false;
   color: #465b52;
   margin: 15px 0 20px 0;
 }
@@ -68,7 +61,6 @@ p {
 button.normal {
   font-size: 14px;
   font-weight: 600;
-  line-height: false;
   color: #000;
   padding: 15px 30px;
   background-color: #fff;
@@ -114,7 +106,6 @@ body {
 .header-list-nav ul a {
   font-size: 16px;
   font-weight: 600;
-  line-height: false;
   color: #1a1a1a;
   text-decoration: none;
   transition: 0.3s ease;
@@ -163,14 +154,11 @@ body {
 }
 #hero h1 {
   font-size: 70px;
-  font-weight: false;
-  line-height: false;
   color: #088178;
 }
 #hero button {
   font-size: 20px;
   font-weight: 700;
-  line-height: false;
   color: #088178;
   background-color: transparent;
   background-image: url(images/button.png);
@@ -210,7 +198,6 @@ body {
   display: inline-block;
   padding: 9px 8px 6px 8px;
   font-size: 14px;
-  font-weight: false;
   line-height: 1;
   color: #088178;
   border-radius: 4px;
@@ -260,15 +247,12 @@ body {
   border-radius: 25px;
 }
 .product-section .product-cart span {
-  font-size: false;
   font-weight: 500;
   line-height: 30px;
   color: #969696;
 }
 .product-section .product-cart h4 {
   font-size: 18px;
-  font-weight: false;
-  line-height: false;
   color: rgb(41, 41, 41);
 }
 .product-section .product-cart .stars {
@@ -349,7 +333,6 @@ h4, span {
   padding: 12px 20px;
   font-size: 16px;
   font-weight: 500;
-  line-height: false;
   color: rgb(248, 248, 248);
   background-color: transparent;
   border: 1px solid rgb(248, 248, 248);
@@ -408,15 +391,11 @@ h4, span {
 }
 #newsletter .newsletter-text h3 {
   font-size: 30px;
-  font-weight: false;
-  line-height: false;
   color: white;
   padding: 0 0 15px 0;
 }
 #newsletter .newsletter-text h5 {
   font-size: 17px;
-  font-weight: false;
-  line-height: false;
   color: rgb(151, 151, 151);
 }
 #newsletter .newsletter-text h5 span {
@@ -441,8 +420,6 @@ h4, span {
   width: 120px;
   background-color: #088178;
   font-size: 17px;
-  font-weight: false;
-  line-height: false;
   color: white;
   border-radius: 0 6px 6px 0;
   cursor: pointer;
